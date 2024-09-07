@@ -1,0 +1,9 @@
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/AirQualityMonitorApplication.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/controller/DeviceController.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/controller/SensorDataController.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/model/Device.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/model/SensorData.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/repository/DeviceRepository.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/repository/SensorDataRepository.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/service/DeviceService.java
+/Users/lana/air-quality-monitor/src/main/java/com/delslay/airqualitymonitor/service/SensorDataService.java
