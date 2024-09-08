@@ -1,0 +1,5 @@
+*.jar
+*.xml
+!pom.xml
+target/
+.vscode/
