@@ -1,9 +1,0 @@
-com/delslay/airqualitymonitor/service/SensorDataService.class
-com/delslay/airqualitymonitor/repository/SensorDataRepository.class
-com/delslay/airqualitymonitor/model/SensorData.class
-com/delslay/airqualitymonitor/repository/DeviceRepository.class
-com/delslay/airqualitymonitor/AirQualityMonitorApplication.class
-com/delslay/airqualitymonitor/controller/DeviceController.class
-com/delslay/airqualitymonitor/controller/SensorDataController.class
-com/delslay/airqualitymonitor/model/Device.class
-com/delslay/airqualitymonitor/service/DeviceService.class
