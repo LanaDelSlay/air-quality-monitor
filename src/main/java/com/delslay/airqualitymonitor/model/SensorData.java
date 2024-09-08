@@ -18,16 +18,62 @@ public class SensorData {
     @JoinColumn(name = "device_id")
     private Device device;
 
-    public SensorData() {
+    public SensorData() {}
+
+    public Long getId() {
+        return id;
     }
 
-    public SensorData(Double vocCount, Double temperature, Double humidity, Double gasLevel, LocalDateTime timestamp, Device device) {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Double getVocCount() {
+        return vocCount;
+    }
+
+    public void setVocCount(Double vocCount) {
         this.vocCount = vocCount;
+    }
+
+    public Double getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(Double temperature) {
         this.temperature = temperature;
+    }
+
+    public Double getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(Double humidity) {
         this.humidity = humidity;
+    }
+
+    public Double getGasLevel() {
+        return gasLevel;
+    }
+
+    public void setGasLevel(Double gasLevel) {
         this.gasLevel = gasLevel;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public Device getDevice() {
+        return device;
+    }
+
+    public void setDevice(Device device) {
         this.device = device;
     }
-    
 }
+
