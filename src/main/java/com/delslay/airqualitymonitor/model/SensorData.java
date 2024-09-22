@@ -11,7 +11,8 @@ public class SensorData {
     private Double vocCount;
     private Double temperature;
     private Double humidity;
-    private Double gasLevel;
+    private Double toluenePpm;
+    private Double formaldehydePpm;
     private LocalDateTime timestamp;
 
     @ManyToOne
@@ -19,6 +20,11 @@ public class SensorData {
     private Device device;
 
     public SensorData() {}
+
+    @PrePersist
+    protected void onCreate() {
+        this.timestamp = LocalDateTime.now();
+    }
 
     public Long getId() {
         return id;
@@ -52,12 +58,20 @@ public class SensorData {
         this.humidity = humidity;
     }
 
-    public Double getGasLevel() {
-        return gasLevel;
+    public Double getToluenePpm() {
+        return toluenePpm;
     }
 
-    public void setGasLevel(Double gasLevel) {
-        this.gasLevel = gasLevel;
+    public void setToluenePpm(Double toluenePpm) {
+        this.toluenePpm = toluenePpm;
+    }
+
+    public void setFormaldehydePpm(Double formaldehydePpm) {
+        this.formaldehydePpm = formaldehydePpm;
+    }
+
+    public Double getFormaldehydePpm() {
+        return formaldehydePpm;
     }
 
     public LocalDateTime getTimestamp() {
@@ -76,4 +90,3 @@ public class SensorData {
         this.device = device;
     }
 }
-
