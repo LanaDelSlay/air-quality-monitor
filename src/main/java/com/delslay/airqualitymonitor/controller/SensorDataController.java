@@ -23,11 +23,16 @@ public class SensorDataController {
 
     @PostMapping("/log")
     public ResponseEntity<SensorData> logSensorData(@RequestBody SensorData sensorData) {
-        Device device = deviceService.findByDeviceId(sensorData.getDevice().getDeviceId());
-        sensorData.setDevice(device); 
-        SensorData savedData = sensorDataService.saveSensorData(sensorData);
-        return ResponseEntity.ok(savedData);
+    Device device = deviceService.findByDeviceId(sensorData.getDevice().getDeviceId());
+    
+    if (device == null) {
+        device = new Device(sensorData.getDevice().getDeviceId(), "New Device", "Default Location");
+        device = deviceService.registerDevice(device);
     }
+    sensorData.setDevice(device);
+    SensorData savedData = sensorDataService.saveSensorData(sensorData);
+    return ResponseEntity.ok(savedData);
+}
 
     @GetMapping("/logs")
     public ResponseEntity<List<SensorData>> getAllSensorLogs() {
