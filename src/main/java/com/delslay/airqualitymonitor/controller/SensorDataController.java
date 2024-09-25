@@ -32,26 +32,29 @@ public class SensorDataController {
     sensorData.setDevice(device);
     SensorData savedData = sensorDataService.saveSensorData(sensorData);
     return ResponseEntity.ok(savedData);
-}
+    }
 
+    @CrossOrigin(origins = "http://localhost:3039")
     @GetMapping("/logs")
     public ResponseEntity<List<SensorData>> getAllSensorLogs() {
         List<SensorData> allSensorLogs = sensorDataService.getAllSensorData();
         return ResponseEntity.ok(allSensorLogs);
     }
-
+    
+    @CrossOrigin(origins = "http://localhost:3039")
     @GetMapping("/logs/{deviceId}")
     public ResponseEntity<List<SensorData>> getSensorLogsByDeviceId(@PathVariable String deviceId) {
         List<SensorData> sensorLogs = sensorDataService.getLogsByDeviceId(deviceId);
         return ResponseEntity.ok(sensorLogs);
     }
     
+    @CrossOrigin(origins = "http://localhost:3039")
     @GetMapping("/logs/{deviceId}/last30days")
     public ResponseEntity<List<SensorData>> getSensorLogsByDeviceIdLast30Days(@PathVariable String deviceId) {
         List<SensorData> sensorLogs = sensorDataService.getLogsByDeviceIdLast30Days(deviceId);
         return ResponseEntity.ok(sensorLogs);
     }
-
+    @CrossOrigin(origins = "http://localhost:3039")
     @GetMapping("/logs/last30days")
     public ResponseEntity<List<SensorData>> getAllSensorLogsLast30Days() {
         List<SensorData> allSensorLogs = sensorDataService.getAllSensorDataLast30Days();
